@@ -44,8 +44,8 @@ const OrderForm= (props) => {
                 </label>
             </div>
             <div id="toppings-checklist">
-                <h4>TOPPINGS</h4>
-                    <label>Cheese
+                <h4> TOPPINGS </h4>
+                    <label> Cheese
                         <input 
                         type= "checkbox"
                         name = "cheese"
@@ -58,7 +58,7 @@ const OrderForm= (props) => {
                         <input 
                         type= "checkbox"
                         name = "pepperoni"
-                        checked = {pizzaOrder.cheese}
+                        checked = {pizzaOrder.pepperoni}
                         onChange={onChange}
                         />
                     </label>
@@ -67,7 +67,7 @@ const OrderForm= (props) => {
                         <input 
                         type= "checkbox"
                         name = "vegetables"
-                        checked = {pizzaOrder.cheese}
+                        checked = {pizzaOrder.vegetables}
                         onChange={onChange}
                         />
                     </label>
@@ -76,7 +76,7 @@ const OrderForm= (props) => {
                         <input 
                         type= "checkbox"
                         name = "chicken"
-                        checked = {pizzaOrder.cheese}
+                        checked = {pizzaOrder.chicken}
                         onChange={onChange}
                         />
                     </label>
@@ -87,12 +87,12 @@ const OrderForm= (props) => {
                     name= "instructions"
                     type= "text"
                     onChange={onChange}
-                    value= {pizzaOrder.special}
+                    value= {pizzaOrder.instructions}
                     />
                 </label>
             </div>
             <div>
-                <button>Place Order</button>
+                <button id="order-button">Place Order</button>
 
             </div>
 

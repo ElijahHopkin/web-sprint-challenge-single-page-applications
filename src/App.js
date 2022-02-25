@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {Route, Link} from 'react-router-dom'
-
+import axios from 'axios'
 import * as yup from 'yup'
 import OrderForm from './components/Order Form'
-import HomeBuild from './components/Home'
+
 import Schema from './components/formValidation'
 
 const initialPizzaOrder= {
@@ -13,7 +13,7 @@ const initialPizzaOrder= {
   pepperoni: false,
   vegetables: false,
   chicken: false,
-  special: ''
+  instructions: ''
 }
 
 const initialErrors = {
@@ -23,7 +23,7 @@ const initialErrors = {
   pepperoni: '',
   vegetables: '',
   chicken: '',
-  special: '' 
+  instructions: '' 
 }
 
 const App = () => {
@@ -44,6 +44,8 @@ const App = () => {
 
   const submit = () => {
 
+    setPizzaOrder(initialPizzaOrder)
+    setErrors(initialErrors)
   }
 
   return (
@@ -56,7 +58,7 @@ const App = () => {
    
       <div className= 'LambdaEats Cafe'>
       <Route exact path= '/'>
-          <HomeBuild />
+        
       </Route>
       <Route path = '/pizza'>
         <OrderForm 
