@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 import OrderForm from './Order Form'
 
 
-const HomeBuild = () => {
+const Confirmation = () => {
 
     return (
         <>
@@ -18,4 +18,4 @@ const HomeBuild = () => {
     )
 }
 
-export default HomeBuild
+export default Confirmation

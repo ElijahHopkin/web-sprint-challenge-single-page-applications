@@ -43,9 +43,13 @@ const App = () => {
   }
 
   const submit = () => {
-
+    axios.post('https://reqres.in/api/orders')
+    .then(res => {
+      console.log(res)
     setPizzaOrder(initialPizzaOrder)
     setErrors(initialErrors)
+  })
+    
   }
 
   return (

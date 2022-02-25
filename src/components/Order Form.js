@@ -1,4 +1,6 @@
 import React from 'react'
+// import {Route} from 'react-router-dom'
+// import Confirmation from './Confirmation'
 
 const OrderForm= (props) => {
     const {pizzaOrder, change, submit, errors} =props
@@ -14,7 +16,9 @@ const OrderForm= (props) => {
 
         submit()
     }
+    // const onClick = () => {
 
+    // }
     return(
         <>
         <form id="pizza-form" onSubmit= {onSubmit}> 
@@ -81,7 +85,7 @@ const OrderForm= (props) => {
                         />
                     </label>
             </div>
-            <div className="special instructions">
+            <div className="special-instructions">
                 <label>SPECIAL INSTRUCTIONS
                     <input id="special-text"
                     name= "instructions"
@@ -91,12 +95,16 @@ const OrderForm= (props) => {
                     />
                 </label>
             </div>
-            <div>
-                <button id="order-button">Place Order</button>
+            <div id="button">
+                <button id="order-button">Add To Order</button>
 
             </div>
 
         </form>
+       {/* <Route path = '/order-confirmation'>
+           <Confirmation />
+       </Route>
+        <button id="order-compiled" onClick= 'location.href = "http://localhost:3001/order-confirmation"' >Proceed to checkout</button> */}
         </>
     )
 
